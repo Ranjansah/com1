@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+  database1:
+    container_name: database1
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=com
+    ports:
+      - 3300:3306
+      
+  spring-boot:
+    depends_on:
+      - database1
+    restart: always
+    build: .
+    ports:
+      - 8000:8080
+    environment:
+      - spring.datasource.url =jdbc:mysql://database1:3306/com?useSSL=false
+    
+      
