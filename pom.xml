@@ -8,6 +8,7 @@
 		<version>2.7.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+	
 	<groupId>com.test.doctor</groupId>
 	<artifactId>HospitalManagement-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
